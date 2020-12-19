@@ -1,0 +1,388 @@
+    body {
+        background-color: black;
+        color: #ffa500;
+    }
+    
+    * {
+        margin: 0;
+        /*star means all in css*/
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    *p {
+        font-family: 'Noto Serif', serif;
+        font-weight: bold;
+        font-size: 25px;
+        color: #ffa500;
+    }
+    
+    *h1 {
+        font-family: 'Roboto Mono', monospace;
+        color: #ffa500;
+    }
+    
+     ::-webkit-scrollbar {
+        /* targets the scroll bar */
+        width: 12px;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        background-color: #ffa500;
+    }
+    /*gallery css */
+    
+    .section h1 {
+        text-align: center;
+    }
+    
+    .gallery {
+        text-align: center;
+    }
+    
+    .gallery img {
+        width: 550px;
+        height: 550px;
+        transition: 0.3s;
+    }
+    
+    .gallery img:hover {
+        transform: scale(1.1) rotate(5deg);
+    }
+    /*gallery*/
+    /*home corey*/
+    
+    #banner {
+        background: url(../images/barbershop.jpg);
+        background-size: cover;
+        height: 100vh;
+    }
+    
+    .nci {
+        text-align: center;
+        padding-top: 120px;
+        text-align: center;
+        font-size: 72px;
+        color: #ffa500;
+    }
+    
+    .nci img {
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 100px;
+    }
+    /*navbar corey*/
+    
+    .slide {
+        height: 100vh;
+    }
+    
+    nav {
+        display: flex;
+        /*  flex shrinks or expands space to its needed size*/
+        justify-content: space-around;
+        /*disrubutes space */
+        align-items: center;
+        min-height: 8vh;
+        /* vh is viewport 1 vh is basically 1%*/
+        font-family: 'Roboto Mono', monospace;
+        background-color: black;
+        width: 100%;
+        margin-bottom: 100px !important;
+    }
+    
+    .logo {
+        color: #ffa500;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+    
+    .links {
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+        opacity: 100%;
+    }
+    
+    .links li {
+        list-style: none;
+    }
+    
+    .links a {
+        color: #ffa500;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 20px;
+        opacity: 100%;
+    }
+    
+    .burger {
+        display: none;
+        cursor: pointer;
+    }
+    
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #ffa500;
+        margin: 5px;
+        transition: all 0.5s ease;
+    }
+    
+    @media screen and (max-width:1024px) {
+        .nav.links {
+            width: 70%;
+        }
+    }
+    
+    @media screen and (max-width:768px) {
+        .links {
+            position: fixed;
+            right: 0px;
+            height: 92vh;
+            top: 8vh;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+        }
+        .links li {
+            opacity: 0;
+        }
+        .burger {
+            display: block;
+        }
+    }
+    
+    .nav-active {
+        transform: translateX(0%);
+    }
+    
+    @keyframes navLinkFade {
+        /* specifeis the animation code*/
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+            /* makes the item horizontal */
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .toggle .line2 {
+        opacity: 0;
+    }
+    
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    /*navbar corey*/
+    
+    .contact {
+        text-align: center;
+        padding-top: 100px;
+    }
+    
+    .contact h1 {
+        color: #ffa500;
+        font-size: 50px;
+        font-family: 'Roboto Mono', monospace;
+    }
+    
+    .contact-container {
+        width: auto;
+        height: 200px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contact-container p {
+        font-size: 30px;
+        display: block;
+        color: #ffa500;
+        font-family: 'Noto Serif', serif;
+    }
+    
+    .map {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border: 3px solid black;
+        width: 805px;
+        height: 505px;
+    }
+    /*form*/
+    
+    input[type=text],
+    /* making the computer know the user is going to input text */
+    
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid black;
+        border-radius: 4px;
+        resize: vertical;
+    }
+    
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+    
+    input[type=submit] {
+        background-color: #ffa500;
+        color: black;
+        padding: 12px 20px;
+        border: solid black;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+    }
+    
+    input[type=submit]:hover {
+        background-color: white;
+    }
+    
+    .container {
+        border-radius: 5px;
+        background-color: black;
+        padding: 20px;
+    }
+    
+    .col-25 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+        color: #ffa500;
+    }
+    
+    .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+        color: #ffa500;
+    }
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .col-25,
+        .col-75,
+        input[type=submit] {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+    /* About us corey*/
+    
+    .header h1 {
+        font-family: 'Roboto Mono', monospace;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    
+    .header {
+        color: #ffa500;
+        padding-top: 100px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    
+    .about {
+        font-size: 25px;
+        font-family: 'Noto Serif', serif;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .price {
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Roboto Mono', monospace;
+        text-decoration: underline;
+    }
+    
+    .amount {
+        font-size: 25px;
+        font-family: 'Noto Serif', serif;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*game* chris*/
+    
+    #gameStart {
+        background-color: #ffa500;
+        /* black */
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 0 auto;
+        display: block;
+        padding: 50px;
+    }
+    
+    #visibleButton {
+        opacity: 0;
+        background-color: #ffa500;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        padding: 50px;
+    }
+    
+    #gameBackround {
+        background-color: #ffa500;
+    }
+    
+    #demo {
+        color: #ffa500;
+        padding: 15px;
+        font-size: 20px;
+    }
+    
+    #score {
+        color: #ffa500;
+        padding: 15px;
+        font-size: 20px;
+    }
+    
+    .instructions {
+        color: #ffa500;
+        padding: 15px;
+        font-size: 22px;
+        font-family: 'Noto Serif', serif;
+    }
+    
+    p {
+        text-align: center;
+    }

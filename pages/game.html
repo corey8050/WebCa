@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>NCI Barbers Game</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="fav icon" type="image/logo" href="../images/icon.ico" />
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav>
+        <div class="logo">
+            <h4>NCI BARBERS</h4>
+        </div>
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <!--Navbar-->
+    <!--game-->
+    <p class="instructions">Test your Click speed!</p>
+    <p class="instructions">Press the button below and try to click the button as soon as it pops up!</p>
+
+    <form>
+        <input type="button" id="gameStart" value="Start Game" onclick="countDown()">
+    </form>
+    <p id="demo"></p>
+    <form>
+        <input type="button" name="button" id="visibleButton" value="Click" onclick="addScore()">
+    </form>
+
+
+    <p id="score"></p>
+    <script src="../java/app.js">
+    </script>
+</body>
+
+
+</html>
